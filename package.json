@@ -1,0 +1,25 @@
+{
+  "name": "chat-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "listen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Majorica/chat-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Majorica/chat-example/issues"
+  },
+  "homepage": "https://gitlab.com/Majorica/chat-example#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "redis": "^2.8.0",
+    "socket.io": "^2.3.0"
+  }
+}
