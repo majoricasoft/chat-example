@@ -16,6 +16,7 @@ const client = redis.createClient({
 
 client.subscribe("live_message");
 client.subscribe("new_room");
+
 client.on("error", err => console.log(err));
 
 client.on("message", function(channel, msg) {
@@ -58,6 +59,11 @@ io.on("connection", socket => {
     }
   });
 
+  socket.on("leave", room => {
+    socket.leave(room);
+    console.log(socket.id, "Leave room", room);
+  });
+   
   socket.on("disconnect", function() {
     console.log("client disconnect: " + socket.id);
   });
